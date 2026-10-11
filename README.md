@@ -5,6 +5,10 @@
 
 A Python package for normalizing, fixing, and formatting ISBNs to make them pretty.
 
+[Source](https://github.com/xymaxim/prettyisbns)
+[Documentation](https://prettyisbns.readthedocs.io/en/latest/)
+[Changelog](https://prettyisbns.readthedocs.io/en/latest/changelog.html)
+
 ## Installation
 
 The package is available on PyPI:
