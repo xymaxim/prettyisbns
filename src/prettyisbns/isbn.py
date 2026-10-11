@@ -316,7 +316,7 @@ def _clean_isbn_string(x: MaybeISBN) -> MaybeISBN:
     return x.replace("-", "").replace(" ", "")
 
 
-def ensure_isbn12(value: int) -> ISBN12:
+def _ensure_isbn12(value: int) -> ISBN12:
     """Ensures that a value is an ISBN-12 number."""
     if not isinstance(value, int):
         raise TypeError(f"value must be int, got {type(value)}")
@@ -392,7 +392,7 @@ def normalize(value: MaybeISBN | ISBN12, fix: bool = False) -> CanonicalISBN:
     """
     match value:
         case int():
-            isbn12 = ensure_isbn12(value)
+            isbn12 = _ensure_isbn12(value)
             normalized_isbn = CanonicalISBN._from_normalized(f"{isbn12}X").fix()
         case str():
             normalized_isbn = CanonicalISBN(cast("str", value))
