@@ -1,5 +1,7 @@
 # prettyisbns
 
+[![Tests](https://github.com/xymaxim/prettyisbns/actions/workflows/ci.yml/badge.svg)](https://github.com/xymaxim/prettyisbns/actions/workflows/ci.yml)
+
 A Python package for normalizing, fixing, and formatting ISBNs to make them pretty.
 
 ## Installation
