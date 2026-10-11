@@ -41,7 +41,9 @@ Format a canonical ISBN with hyphens to split it into elements:
 '978-2-36590-117-8'
 ```
 
-To normalize, fix, and format in one step, use the `pretty()` shortcut:
+To normalize, fix, and format in one step, use the
+[`pretty()`](https://prettyisbns.readthedocs.io/en/latest/api/prettyisbns.html#prettyisbns.pretty)
+shortcut:
 
 ```pycon
 >>> from prettyisbns import pretty
@@ -58,10 +60,12 @@ module. In that case, update the package or open an issue.
 
 ### Access ISBN elements
 
-Internally, formatting is done by `ISBNLayout`, which splits an ISBN into
-bookland, registration group, registrant, publication, and check digit
-elements. You can access it through the `layout` property, which supports
-slicing for a granular output:
+Internally, formatting is done by
+[`ISBNLayout`](https://prettyisbns.readthedocs.io/en/latest/api/prettyisbns.isbn.html#prettyisbns.isbn.ISBNLayout),
+which splits an ISBN into bookland, registration group, registrant, publication,
+and check digit elements. You can access it through the
+[`layout`](https://prettyisbns.readthedocs.io/en/latest/api/prettyisbns.isbn.html#prettyisbns.isbn.CanonicalISBN.layout)
+property, which supports slicing for a granular output:
 
 ```pycon
 # Split the canonical ISBN into its elements
@@ -86,8 +90,10 @@ ISBNLayout(
 ### Validate ISBNs
 
 Check an ISBN's check digit, registration group, and registrant range with
-`validate()`. It returns a `ValidationResult`, which is truthy only when the
-ISBN is valid:
+[`validate()`](https://prettyisbns.readthedocs.io/en/latest/api/prettyisbns.isbn.html#prettyisbns.isbn.CanonicalISBN.validate).
+It returns a
+[`ValidationResult`](https://prettyisbns.readthedocs.io/en/latest/api/prettyisbns.isbn.html#prettyisbns.isbn.ValidationResult),
+which is truthy only when the ISBN is valid:
 
 ```python
 if result := canonical.validate():
@@ -98,10 +104,13 @@ else:
 
 ### Handle errors
 
-Normalizing raises `NotISBNError` if a value is neither ISBN-10 nor ISBN-13,
-and formatting raises `InvalidISBNError` if the registration group or
-registrant range of an ISBN is not defined. Its `reason` attribute tells what
-exactly is wrong:
+Normalizing raises
+[`NotISBNError`](https://prettyisbns.readthedocs.io/en/latest/api/prettyisbns.errors.html#prettyisbns.errors.NotISBNError)
+if a value is neither ISBN-10 nor ISBN-13, and formatting raises
+[`InvalidISBNError`](https://prettyisbns.readthedocs.io/en/latest/api/prettyisbns.errors.html#prettyisbns.errors.InvalidISBNError)
+if the registration group or registrant range of an ISBN is not defined. Its
+[`reason`](https://prettyisbns.readthedocs.io/en/latest/api/prettyisbns.errors.html#prettyisbns.errors.InvalidISBNError)
+attribute tells what exactly is wrong:
 
 ```python
 from prettyisbns import pretty
