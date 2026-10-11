@@ -5,3 +5,4 @@
 
    usage
    api/index
+   changelog
