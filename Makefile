@@ -2,6 +2,10 @@
 docs:
 	uv run sphinx-build docs docs/_build
 
+.PHONY: build
+build:
+	uv build
+
 RangeMessage.xml:
 	curl https://www.isbn-international.org/export_rangemessage.xml \
 	  -o RangeMessage.xml

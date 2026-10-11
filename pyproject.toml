@@ -34,6 +34,9 @@ GitHub = "https://github.com/xymaxim/prettyisbns"
 requires = ["uv_build>=0.9.18,<0.10.0"]
 build-backend = "uv_build"
 
+[tool.uv.build-backend]
+source-exclude = ["*\\~", "\\#*\\#"]
+
 [dependency-groups]
 dev = [
     "pre-commit>=4.0",
