@@ -6,16 +6,6 @@ Usage
    :backlinks: top
    :local:
 
-The package provides classes and functions to work with ISBNs, both numeric and
-string types.
-
-The package works with ISBNs represented as *ISBN-12* values (without the check
-digit) of integer types. You can use :func:`~prettyisbns.isbn.ensure_isbn12` to
-make sure that your values are valid if needed.
-
-To work with strings, we have two classes, :class:`~prettyisbns.isbn.CanonicalISBN`
-and :class:`~prettyisbns.isbn.ISBNLayout`.
-
 Normalize input values
 **********************
 
