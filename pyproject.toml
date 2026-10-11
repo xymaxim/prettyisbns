@@ -22,6 +22,9 @@ docs = [
     "sphinx>=9.0.4",
     "sphinx-mdinclude>=0.6.2",
 ]
+ranges = [
+    "defusedxml>=0.7.1",
+]
 
 [project.urls]
 Documentation = "https://prettyisbns.readthedocs.io/en/stable"
@@ -33,7 +36,6 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-    "defusedxml>=0.7.1",
     "pre-commit>=4.0",
     "pyrefly==1.3.2",
     "pytest>=9.0.2",

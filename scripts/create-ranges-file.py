@@ -7,7 +7,7 @@ How to use this script?
 Agency website: https://www.isbn-international.org/range_file_generation.
 2. Run the following command from the project root:
 
-   uv run python scripts/create-groups-file.py RangeMessage.xml \
+   uv run --extra ranges python scripts/create-ranges-file.py RangeMessage.xml \
      > src/prettyisbns/ranges.py
 """
 

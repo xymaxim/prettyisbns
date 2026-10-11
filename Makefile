@@ -9,5 +9,6 @@ RangeMessage.xml:
 # If download failed and you already have the RangeMessage.xml file, then
 # run only this target as: make -W RangeMessage.xml ranges.py
 ranges.py: RangeMessage.xml
-	uv run python scripts/create-ranges-file.py RangeMessage.xml \
+	uv run --extra ranges python scripts/create-ranges-file.py RangeMessage.xml \
 	  > src/prettyisbns/ranges.py
+	uv run --extra ranges ruff format src/prettyisbns/ranges.py
