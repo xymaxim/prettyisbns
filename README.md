@@ -25,11 +25,11 @@ Normalize an ISBN and fix its check digit:
 CanonicalISBN(9782365901178)
 ```
 
-The result is a `CanonicalISBN`, a normalized ISBN-13 string without hyphens.
+The result is a canonical, normalized ISBN-13 string without hyphens.
 
 ### Format ISBNs
 
-Format a canonical ISBN with hyphens:
+Format a canonical ISBN with hyphens to split it into elements:
 
 ```pycon
 >>> canonical.hyphenate()
@@ -46,9 +46,10 @@ To normalize, fix, and format in one step, use the `pretty()` shortcut:
 
 Formatting relies on the registration groups and registrant ranges from the
 [International ISBN Agency](https://www.isbn-international.org/), which are
-stored in the auto-generated `prettyisbns.ranges` module. Ranges can be redefined,
-which may cause a discrepancy with the module. In that case, update the package
-or open an issue.
+stored in the auto-generated
+[prettyisbns.ranges](https://github.com/xymaxim/prettyisbns/blob/main/src/prettyisbns/ranges.py)
+module. Ranges can be redefined, which may cause a discrepancy with the
+module. In that case, update the package or open an issue.
 
 ### Access ISBN elements
 
